@@ -1,6 +1,9 @@
 
 import './App.css';
+import ProductItem from './components/ProductItem';
+import ProductList from './components/ProductList';
 import prducts from './data';
+import Header from './components/Header';
 function App() {
  
   const productList = prducts.map((product)=>{
@@ -12,6 +15,7 @@ function App() {
     <p>{product.price}</p>
   </div>
   )})
+  let visitorsNum =0
   return (
     
     
@@ -20,6 +24,8 @@ function App() {
         <div>
         <h1>MAMA'S BAKERY</h1>
         <p>Freshly made</p>
+        <Header/>
+        {/* <div><p>Visitors {visitorsNum}</p><button onClick={()=>visitorsNum=visitorsNum+1}>Visited</button></div> */}
         </div>
         <div>
           <img className="image" src="https://img.freepik.com/free-vector/outside-bakery-shop-background_1308-122413.jpg" alt="Bakery"/>
@@ -46,8 +52,8 @@ function App() {
         </div>
         )})
         } */}
-         {productList}
-         
+         {/* {productList} */}
+         <ProductList/>
         </div>
       </header>
     </div>
